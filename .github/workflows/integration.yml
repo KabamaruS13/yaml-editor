@@ -9,7 +9,7 @@ jobs:
         id: selftest
 
         # Put your action repo here
-        uses: jacobtomlinson/go-container-action@master
+        uses: KabamaruS13/yaml-editor@master
 
       - name: Check outputs
         run: |
