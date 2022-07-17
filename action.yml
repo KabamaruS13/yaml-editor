@@ -1,9 +1,10 @@
-name: "Go Container Action Template"
-description: "Get started with Go Container actions"
-author: "Jacob Tomlinson"
+name: "Yaml Editor"
+description: "This is a go github action to edit any yaml provided."
+author: "Sotiris Giagkiozis"
 inputs:
   myInput:
     description: "Input to use"
+    required: true
     default: "world"
 outputs:
   myOutput:
