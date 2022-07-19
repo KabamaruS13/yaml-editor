@@ -12,6 +12,9 @@ inputs:
   propertyPath:
     required: true
     description: 'Property Path - using dot for nesting: e.g. backend.version'
+  key:
+    required: false
+    description: "New property key in case of 'insert' action"
   value:
     required: true
     description: 'New property value'
