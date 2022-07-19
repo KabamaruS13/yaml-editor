@@ -6,6 +6,13 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Self test
+        with:
+          myInput: "world"
+          valueFile: "test.yaml"
+          propertyPath: "key1"
+          key: ""
+          value: "test"
+          action: "update"
         id: selftest
 
         # Put your action repo here
