@@ -13,10 +13,22 @@ jobs:
           value: "[{\"key71\": \"value75\", \"key72\": \"value76\"}]"
           action: "upsert"
         id: selftest
-
-        # Put your action repo here
         uses: KabamaruS13/yaml-editor@master
 
       - name: Check outputs
         run: |
           test "${{ steps.selftest.outputs.yamlContent }}" == "key1: value1"
+
+      - name: Self test 2
+        with:
+          valueFile: "test.yaml"
+          parentPath: ""
+          key: "key1"
+          value: ""
+          action: "delete"
+        id: selftest2
+        uses: KabamaruS13/yaml-editor@master
+
+      - name: Check outputs 2
+        run: |
+          test "${{ steps.selftest2.outputs.yamlContent }}" == "key2:"
