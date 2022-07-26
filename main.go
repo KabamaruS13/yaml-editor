@@ -7,16 +7,17 @@ import (
 	"github.com/stretchr/stew/objects"
 	"gopkg.in/yaml.v3"
 	"io/ioutil"
+	"os"
 	"strings"
 )
 
 func main() {
 
-	valueFile := "test.yaml"                                      //os.Getenv("INPUT_VALUEFILE")
-	parentPath := "key2"                                          //os.Getenv("INPUT_PARENTPATH")
-	key := "key7"                                                 //os.Getenv("INPUT_KEY")
-	value := "[{\"key71\": \"value75\", \"key72\": \"value76\"}]" //os.Getenv("INPUT_VALUE")
-	action := "upsert"                                            //os.Getenv("INPUT_ACTION")
+	valueFile := os.Getenv("INPUT_VALUEFILE")
+	parentPath := os.Getenv("INPUT_PARENTPATH")
+	key := os.Getenv("INPUT_KEY")
+	value := os.Getenv("INPUT_VALUE")
+	action := os.Getenv("INPUT_ACTION")
 
 	output, err := yamlEdit(valueFile, parentPath, key, value, action)
 	if err != nil {

@@ -8,7 +8,7 @@ jobs:
       - name: Self test
         with:
           valueFile: "test.yaml"
-          propertyPath: "key2"
+          parentPath: "key2"
           key: "key7"
           value: "[{\"key71\": \"value75\", \"key72\": \"value76\"}]"
           action: "upsert"
