@@ -19,4 +19,4 @@ jobs:
 
       - name: Check outputs
         run: |
-          test "${{ steps.selftest.outputs.yamlContent }}" == "key1: value1\nkey2:\n    key3:\n        key4: value4\n        key5: value5\n    key6:\n        - value2\n        - value3\n    key7:\n        - key71: value71\n          key72: value72\n        - key71: value73\n          key72: value74\n        - key71: value75\n          key72: value76\n"
+          test "${{ steps.selftest.outputs.yamlContent }}" == "key1: value1"
