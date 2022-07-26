@@ -23,7 +23,7 @@ func main() {
 		return
 	}
 
-	fmt.Println(fmt.Sprintf(`::set-output name=yamlContent::%s`, output))
+	fmt.Println(fmt.Sprintf("::set-output name=yamlContent::%s", output))
 }
 
 func yamlEdit(valueFile, parentPath, key, value, action string) (string, error) {
